@@ -1,75 +1,55 @@
-# Nuxt Minimal Starter
+# User Management Application
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Тестовое задание на позицию Frontend Developer
 
-## Setup
+## Технологический стек
 
-Make sure to install dependencies:
+- **Nuxt 3** - Vue.js фреймворк
+- **Vue 3** - Composition API
+- **TypeScript** - строгая типизация
+- **Pinia** - управление состоянием
+- **Tailwind CSS** - стилизация
+
+## Функциональность
+
+- Просмотр списка пользователей с пагинацией
+- Фильтрация по всем колонкам
+- Сортировка по полям
+- Создание новых пользователей
+- Редактирование существующих пользователей
+- Удаление пользователей
+- Валидация форм
+
+## Структура проекта
+
+```text
+components/
+├── ui/                 # UI компоненты
+└── UserTable.vue       # Основная таблица
+└── UserForm.vue        # Форма пользователя
+
+composables/
+└── useUsers.ts         # Композабл для работы с пользователями
+
+stores/
+└── user.ts            # Pinia стор
+
+types/
+├── user.ts            # Типы пользователей
+└── enums.ts           # Перечисления и константы
+
+utils/
+└── date.ts            # Утилиты для дат
+
+public/
+└── userList.json      # Данные пользователей
+```
+
+## Запуск
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Приложение будет доступно на <http://localhost:3000>

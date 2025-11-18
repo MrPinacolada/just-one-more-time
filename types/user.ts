@@ -1,3 +1,5 @@
+import { SortOrder, UserFields } from './enums'
+
 export interface User {
   id: number
   firstName: string
@@ -23,33 +25,15 @@ export interface UpdateUser {
 
 export interface UserFilters {
   search?: string
-  sortBy?: keyof User
-  sortOrder?: 'asc' | 'desc'
+  sortBy?: UserFields
+  sortOrder?: SortOrder
 }
 
 export interface Pagination {
   page: number
   limit: number
   total: number
-}
-
-export interface UserListParams {
-  page?: number
-  limit?: number
-  search?: string
-  sortBy?: keyof User
-  sortOrder?: 'asc' | 'desc'
-}
-
-export interface UserListResponse {
-  users: User[]
-  pagination: Pagination
-}
-
-export interface UserAPI {
-  getUsers(params?: UserListParams): Promise<UserListResponse>
-  getUser(id: number): Promise<User>
-  createUser(user: CreateUser): Promise<User>
-  updateUser(user: UpdateUser): Promise<User>
-  deleteUser(id: number): Promise<void>
+  totalPages: number
+  hasNext: boolean
+  hasPrev: boolean
 }
