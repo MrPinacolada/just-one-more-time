@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     strict: true,
   },
   
+  target: "static",
   components: true,
   ssr: false,
 });
