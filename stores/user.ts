@@ -27,7 +27,7 @@ export const useUserStore = defineStore("users", () => {
     error.value = null;
 
     try {
-      const response = await fetch("/userList.json");
+      const response = await fetch("./userList.json");
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
