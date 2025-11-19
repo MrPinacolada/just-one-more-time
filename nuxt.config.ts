@@ -16,6 +16,7 @@ export default defineNuxtConfig({
       crawlLinks: false
     }
   },
-  
+  ssr:false,
+  target: "static",
   components: true,
 });
