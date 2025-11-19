@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: "/just-one-more-time",
+    baseURL: "/",
   },
   compatibilityDate: "2025-07-15",
   devtools: { enabled: false },
@@ -9,15 +9,12 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
-  
-  nitro: {
-    prerender: {
-      routes: ['/'],
-      crawlLinks: false,
-      failOnError: false
-    }
+
+  router: {
+    base: "/",
   },
-  
+  target: "static",
+
   ssr: false,
   components: true,
 });
