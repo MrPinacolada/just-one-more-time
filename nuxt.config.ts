@@ -13,10 +13,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ['/'],
-      crawlLinks: false
+      crawlLinks: false,
+      failOnError: false
     }
   },
-  ssr:false,
-  target: "static",
+  
+  ssr: false,
   components: true,
 });
