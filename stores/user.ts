@@ -1,3 +1,4 @@
+import { defineStore } from 'pinia';
 import type { User, CreateUser, UpdateUser } from "~/types/user";
 import { SortOrder, UserFields } from "~/types/enums";
 

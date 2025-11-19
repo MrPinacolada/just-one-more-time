@@ -10,7 +10,12 @@ export default defineNuxtConfig({
     strict: true,
   },
   
-  target: "static",
+  nitro: {
+    prerender: {
+      routes: ['/'],
+      crawlLinks: false
+    }
+  },
+  
   components: true,
-  ssr: false,
 });
